@@ -1,38 +1,248 @@
-.App {
-  text-align: center;
+/* General styles */
+body {
+  background-color: #DCE1DE;
+  color: #1F2421;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: #216869;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: #1F2421;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar {
+  background-color: #216869 !important;
+}
+
+.custom-navbar {
+  background-color: #216869 !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #DCE1DE !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.navbar-brand:hover {
+  color: #DCE1DE !important;
+}
+
+.btn {
+  background-color: #216869;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #1F2421;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Product styles */
+.product-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.product-image-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.card-body {
+  padding: 1rem;
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}
+
+.price-add-to-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem;
+  background-color: #F8F9FA;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  width: auto;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1F2421;
+  white-space: nowrap;
+}
+
+.divider {
+  height: 24px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 5px;
+}
+
+.btn-link.add-to-cart-btn {
+  color: #216869 !important;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.btn-link.add-to-cart-btn:hover {
+  color: #1F2421 !important;
+}
+
+/* Cart styles */
+.cart-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.cart-item-right {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-label {
+  margin: 0 10px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-link {
+  padding: 0;
+  margin: 0 5px;
+  color: #216869;
+}
+
+.btn-link:hover {
+  color: #1F2421;
+}
+
+.btn.quantity-btn {
+  color: #216869;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.quantity-btn:hover {
+  background-color: #1F2421;
+}
+
+.btn.btn-link.remove-btn {
+  color: red;
+  margin-left: 10px;
+}
+
+.price {
+  width: 80px;
+  text-align: right;
+}
+
+.cart-total-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.total {
+  margin-bottom: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.btn.btn-black {
+  background-color: #216869;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-black:hover {
+  background-color: #1F2421;
+  color: white;
+  border: 1px solid #1F2421;
+}
+
+/* Category styles */
+.category-card {
+  text-decoration: none;
+  color: #1F2421;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.category-card:hover {
+  background-color: #F8F9FA;
+}
+
+.category-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-card .card-title {
+  margin-top: 10px;
 }
